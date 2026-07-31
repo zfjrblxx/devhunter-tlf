@@ -1,30 +1,31 @@
+@keyframes fadeUp{
 
-@keyframes pulse{
+from{
 
-0%{
+opacity:0;
 
-text-shadow:
+transform:
 
-0 0 10px red;
-
-}
-
-50%{
-
-text-shadow:
-
-0 0 30px red,
-
-0 0 60px red;
+translateY(20px);
 
 }
 
-100%{
+to{
 
-text-shadow:
+opacity:1;
 
-0 0 10px red;
+transform:
+
+translateY(0);
 
 }
+
+}
+
+.fade-up{
+
+animation:
+
+fadeUp .5s ease;
 
 }
