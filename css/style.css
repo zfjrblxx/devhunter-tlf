@@ -41,3 +41,30 @@ align-items:center;
 justify-content:center;
 
 }
+
+
+body{
+
+background:
+
+radial-gradient(circle at top,
+
+#1b0000,
+
+#080808 60%);
+
+font-family:Inter,sans-serif;
+
+}
+
+#app{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+}
