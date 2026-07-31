@@ -43,3 +43,56 @@ function startStory(){
     typeLine();
 
 }
+
+function typeLine(){
+
+    if(storyIndex >= introLines.length){
+
+        const btn =
+        document.getElementById("continueBtn");
+
+        btn.classList.remove("hidden");
+
+        btn.onclick = () => {
+
+            enterTown();
+
+        };
+
+        return;
+
+    }
+
+    const box =
+    document.getElementById("storyText");
+
+    const p =
+    document.createElement("p");
+
+    box.appendChild(p);
+
+    let i = 0;
+
+    const line = introLines[storyIndex];
+
+    const timer = setInterval(()=>{
+
+        if(i < line.length){
+
+            p.textContent += line[i];
+
+            i++;
+
+        }else{
+
+            clearInterval(timer);
+
+            storyIndex++;
+
+            setTimeout(typeLine,350);
+
+        }
+
+    },30);
+
+}
