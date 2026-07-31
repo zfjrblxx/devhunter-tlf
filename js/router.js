@@ -1,15 +1,23 @@
-const Router={
+const Router = {
 
-go(screen){
+    routes: {},
 
-console.log(
+    register(name, render){
 
-"Screen :",
+        this.routes[name] = render;
 
-screen
+    },
 
-);
+    go(name){
 
-}
+        const screen = this.routes[name];
+
+        if(screen){
+
+            screen();
+
+        }
+
+    }
 
 };
