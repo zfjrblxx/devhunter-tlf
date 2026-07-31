@@ -65,3 +65,26 @@ START
 `;
 
 });
+
+
+window.addEventListener(
+
+"DOMContentLoaded",
+
+()=>{
+
+Router.register(
+
+"menu",
+
+renderMenu
+
+);
+
+Router.go(
+
+"menu"
+
+);
+
+});
