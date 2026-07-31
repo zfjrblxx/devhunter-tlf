@@ -48,11 +48,11 @@ addMenuEvents();
 
 function addMenuEvents(){
 
-document.getElementById("newGame").onclick=()=>{
+document.getElementById("newGame").onclick = () => {
 
-alert("Coming Soon");
+    startStory();
 
-}
+};
 
 document.getElementById("continueGame").onclick=()=>{
 
