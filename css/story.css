@@ -1,0 +1,25 @@
+.story-screen{
+
+width:800px;
+
+max-width:90%;
+
+}
+
+.story-screen p{
+
+font-size:20px;
+
+line-height:1.8;
+
+margin-bottom:8px;
+
+color:white;
+
+}
+
+.hidden{
+
+display:none;
+
+}
