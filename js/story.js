@@ -1,85 +1,45 @@
-const introText = [
+const introLines = [
 
-"Year 2089...",
-"",
-"Humanity thought the Devil War had ended.",
-"",
-"They were wrong.",
-"",
-"Thousands of Hunters entered the Abyss.",
-"",
-"None returned.",
-"",
-"Now...",
-"",
-"Only one Hunter remains.",
-"",
-"You."
+    "Year 2089...",
+    "",
+    "The Devil War was believed to be over.",
+    "",
+    "But the Abyss has opened once again.",
+    "",
+    "Thousands of Devil Hunters entered...",
+    "",
+    "None returned.",
+    "",
+    "Only one Hunter remains.",
+    "",
+    "You."
 
 ];
 
-let currentLine = 0;
+let storyIndex = 0;
 
 function startStory(){
 
-document.getElementById("app").innerHTML=`
+    storyIndex = 0;
 
-<div class="story-screen">
+    document.getElementById("app").innerHTML = `
 
-<div id="storyText"></div>
+        <div class="story">
 
-<button id="nextStory" class="hidden">
+            <div id="storyText"></div>
 
-Continue
+            <button
+                id="continueBtn"
+                class="continue hidden">
 
-</button>
+                Continue
 
-</div>
+            </button>
 
-`;
+        </div>
 
-typeNextLine();
+    `;
 
-}
-
-
-
-
-function typeNextLine(){
-
-if(currentLine>=introText.length){
-
-document.getElementById("nextStory")
-.classList.remove("hidden");
-
-return;
-
-}
-
-const text=document.getElementById("storyText");
-
-const p=document.createElement("p");
-
-text.appendChild(p);
-
-let i=0;
-
-const timer=setInterval(()=>{
-
-p.textContent+=introText[currentLine][i]||"";
-
-i++;
-
-if(i>introText[currentLine].length){
-
-clearInterval(timer);
-
-currentLine++;
-
-setTimeout(typeNextLine,400);
-
-}
-
-},25);
+    typeLine();
 
 }
